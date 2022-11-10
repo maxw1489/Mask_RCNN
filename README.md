@@ -35,7 +35,7 @@ The project was created to improve the old well known network while having fun b
     wget -P data https://github.com/matterport/Mask_RCNN/releases/download/v2.1/balloon_dataset.zip
     unzip data/balloon_dataset.zip -d data
     ```
-5. To train Mask-RCNN on a custom data. Copy the balloon folder and adjust everything you need to your dataset. 
+5. To train Mask-RCNN on a custom data copy the balloon folder and adjust everything you need to your dataset. 
 
 # Known-Warnings
 The warnings are annoying but doesn't harm anything: 
