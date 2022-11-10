@@ -1,0 +1,37 @@
+FROM tensorflow/tensorflow:2.9.1-gpu-jupyter
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# update dependencies
+RUN apt-get update \
+    && apt-get install -y \
+    tree \ 
+    wget \
+    && pip install --upgrade pip \
+    && rm -rf /var/lib/apt/lists/*
+
+# OpenCV
+RUN apt-get update \
+    && apt-get install -y python3-opencv \
+    && pip install -U opencv-python
+
+# Dev modules
+RUN pip install -U \
+    pandas \
+    scikit-image \
+    imgaug \
+    scikit-learn \
+    requests \
+    pycocotools
+    
+# Run as user not as root
+ARG USER=ai
+ARG GID
+ARG UID
+
+RUN groupadd --gid ${GID} ${USER} \
+    && useradd -rm -d /home/${USER} -s /bin/bash -g ${GID} -u ${UID} ${USER}
+    
+USER ${USER}
+
+WORKDIR /home/${USER}
