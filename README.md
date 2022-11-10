@@ -1,7 +1,7 @@
 # Mask-RCNN TensorFlow 2
 The repository provides a refactored version of the original [Mask-RCNN](https://github.com/matterport/Mask_RCNN) **without the need for any references to the TensorFlow v1 or the standalone Keras packages** anymore! Thus, the Mask-RCNN can now be executed on **any recent TensorFlow version** (`tested onto TF 2.9.1 env.`) and the **eager execution** can be tuned on/off for debugging anytime. Additionally, the DataGenerator is refactored providing the same results using *use_multiprocessing=False/True*.
 
-The project was created to improve the old well know network while having fun breaking it, learning many crazy aspectes of TensorFlow and Python, and simply enjoying coding. I want also to thank [akTwelve](https://github.com/akTwelve/Mask_RCNN) for providing a great starting point I could build on. For full explanation on Mask-RCNN refer to the [original repo](https://github.com/matterport/Mask_RCNN) and to the original [medium article](https://medium.com/matterport-engineering/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46).
+The project was created to improve the old well known network while having fun breaking it, learning many crazy aspectes of TensorFlow and Python, and simply enjoying coding. I want also to thank [akTwelve](https://github.com/akTwelve/Mask_RCNN) for providing a great starting point I could build on. For full explanation on Mask-RCNN refer to the [original repo](https://github.com/matterport/Mask_RCNN) and to the original [medium article](https://medium.com/matterport-engineering/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46).
 
 # Getting started
 1. Clone the repo.
@@ -35,10 +35,10 @@ The project was created to improve the old well know network while having fun br
     wget -P data https://github.com/matterport/Mask_RCNN/releases/download/v2.1/balloon_dataset.zip
     unzip data/balloon_dataset.zip -d data
     ```
-5. Train Mask-RCNN on a custom data. Copy the balloon folder and adjust everything you need to your dataset. 
+5. To train Mask-RCNN on a custom data. Copy the balloon folder and adjust everything you need to your dataset. 
 
 # Known-Warnings
-The warning are annoying but doesn't harm anything: 
+The warnings are annoying but doesn't harm anything: 
 * ... Error in PredictCost() for the op: op: "CropAndResize" ...
 * ... UserWarning: Converting sparse IndexedSlices ...
 
